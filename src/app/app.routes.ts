@@ -1,6 +1,7 @@
 import { WebpackAsyncRoute } from '@angularclass/webpack-toolkit';
 import { RouterConfig } from '@angular/router';
 import { Home } from './home';
+import { Demo } from './demo';
 import { NoContent } from './no-content';
 
 import { DataResolver } from './app.resolver';
@@ -19,7 +20,8 @@ export const routes: RouterConfig = [
     children: [
       { path: '', component: 'Index' }  // must be included
     ]},
-  { path: '**',    component: NoContent },
+  { path: 'demo', component: Demo },
+  { path: '**',    component: NoContent }
 ];
 
 // Async load a component using Webpack's require with es6-promise-loader and webpack `require`
